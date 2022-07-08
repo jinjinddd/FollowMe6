@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bottonshape_blue"
+    android:orientation="vertical"
+    tools:context=".HomeFragment">
+
+        <View
+            android:id="@+id/viewBackground"
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="0dp" />
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginLeft="@dimen/_16sdp"
+            android:text="ID"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+                <ImageView
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:layout_marginRight="@dimen/_16sdp"
+                    android:layout_width="130dp"
+                    android:layout_height="50dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintBottom_toBottomOf="@id/textTitle"
+                    app:layout_constraintTop_toTopOf="@id/textTitle"
+                    android:src="@drawable/logo"
+                    tools:ignore="MissingConstraints"/>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    app:cardBackgroundColor="@color/white_gray_color"
+                    app:layout_constraintBottom_toBottomOf="@id/viewBackground"
+                    app:layout_constraintTop_toBottomOf="@id/viewBackground"
+                    app:cardCornerRadius="@dimen/_16sdp"
+                    >
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_14sdp">
+                    <WebView
+                        android:id="@+id/webview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+               >
+                <HorizontalScrollView
+
+                    android:id="@+id/hscroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="500dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/btn_url"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:layout_margin="20dp"
+                            app:cardCornerRadius="20dp"
+                            app:cardElevation="10dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                >
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_marginTop="5dp"
+                                    android:src="@drawable/gonji"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:text="@string/chosun_site1"
+                                android:textColor="@android:color/primary_text_light_nodisable"
+                                android:textSize="25sp"
+                                android:layout_gravity="center"
+                                android:textStyle="bold" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/sw_url"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:layout_margin="20dp"
+                            app:cardCornerRadius="20dp"
+                            app:cardElevation="10dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:src="@drawable/gonji"/>
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="15dp"
+                                android:text="@string/chosun_site2"
+                                android:textColor="@android:color/primary_text_light_nodisable"
+                                android:textSize="25sp"
+                                android:textStyle="bold" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cu_url"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:layout_margin="20dp"
+                            app:cardCornerRadius="20dp"
+                            app:cardElevation="10dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:src="@drawable/gonji"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:text="@string/chosun_site3"
+                                android:textColor="@android:color/primary_text_light_nodisable"
+                                android:textSize="23sp"
+                                android:textStyle="bold" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                </HorizontalScrollView>
+                <TextView
+                    android:layout_below="@+id/hscroll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:text="☎062-230-7114☎"
+                    android:textColor="#ffffff"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hor_guide2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="683dp">
+
+    </androidx.constraintlayout.widget.Guideline>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
